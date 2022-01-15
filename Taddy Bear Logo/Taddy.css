@@ -1,0 +1,112 @@
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%; 
+}
+
+:root{
+    --main-bg: #bcbcbc;
+    --border-clr: #1e272e;
+    --box-shadow: 0 1rem 1rem -0.8rem rgba(0,0,0,0.5);
+}
+
+.center-div{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(206, 21%, 94%);
+    display: grid;
+    place-items: center;
+}
+
+.face{
+    width: 30rem;
+    height: 28rem;
+    position: relative;
+    border: 1rem solid var(--border-clr);
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+}
+
+.face::before, .face::after{
+    content: '';
+    width: 15rem;
+    height: 14rem;
+    border: 3.5rem solid var(--border-clr);
+    background-color: var(--main-bg);
+    position: absolute;
+    top: -3rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+.face::after{
+    right: -10rem;
+    transform: rotate(-120deg);
+}
+
+.face::before{
+    left: -10rem;
+    transform: rotate(120deg);
+}
+
+.eyes{
+    width: 28rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.left-eye, .right-eye{
+    width: 8.5rem;
+    height: 10.5rem;
+    background-color: var(--border-clr);
+    border-radius:  5rem;
+    margin-top: 6rem;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.left-eye::before, .right-eye::before{
+    content: '';
+    width: 4rem;
+    height: 5.25rem;
+    background-color: var(--border-clr);
+    border-radius: 50%;
+    border: .8rem solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.left-eye::after, .right-eye::after{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.right-eye{
+    margin-left: 4rem;
+}
+
+.nose{
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--border-clr);
+
+    margin: auto;
+    margin-top: 4rem;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}

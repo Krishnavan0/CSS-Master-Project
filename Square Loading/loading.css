@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html{
+    font-size: ;
+}
+.main_loading{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: hsl(206, 21%, 94%);
+    display: grid;
+    place-items: center; }
+
+.center_loading{
+    width: 15rem;
+    height: 15rem;
+    position: relative; }
+
+span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 5rem;
+    height: 5rem;
+    /* border-radius: 50%; */
+    background-color: #fa0404;
+    animation: load 2s linear infinite;
+    box-shadow: 0 2.8px 2.2px rgba(0,0,0,0.034),
+    0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.5px 10px rgba(0,0,0,0.06),
+    0 22.3px 17.9px rgba(0,0,0,0.072), 0 41.8px 33.4px rgba(0,0,0,0.086),
+    0 100px 80px rgba(0,0,0,0.012); }
+
+span:nth-child(2){
+    animation-delay: 0.67s;
+    background-color: rgb(0, 0, 255); }
+
+span:nth-child(3){
+    animation-delay: 1.32s;
+    background-color: rgb(0, 255, 0); }
+
+@keyframes load{
+    0%{ left: 0; top: 0; }
+    12.5%{ left: 50%; top: 0; }
+    25%{ left: 50%; top: 0; }
+    37.5%{ left: 50%; top: 50%; }
+    50%{ left: 50%; top: 50%; }
+    62.5%{ left: 0; top: 50%; }
+    75%{ left: 0; top: 50%; }
+    82.5%{ left: 0; top: 50%; }
+    100%{ left: 0; top: 0; }
+}
